@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend');
+
+
+* {
+  box-sizing: border-box;
+  font-family: Lexend;
+  color: azure;
+}
+
+html,
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+}
+
+html {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../../Images/stock-exchange-background.jpeg);
+  background-size: 1800px;
+  background-blend-mode: multiply;
+}
+
+.h1-header {
+  text-align: center;
+  font-family: Lexend;
+  font-weight: bold;
+  font-size: 6vw;
+  margin: 7%;
+}
+
+.h2-header {
+  text-align: center;
+  font-family: Lexend;
+  font-weight: bold;
+  font-size: 5vw;
+}
+
+.h3-header {
+  text-align: center;
+  font-family: Lexend;
+  font-weight: bold;
+  font-size: 4vw;
+  text-decoration: underline;
+}
+
+.h4-header {
+  text-align: center;
+  font-family: Lexend;
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+.h5-header {
+  text-align: center;
+  font-family: Lexend;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.smaller-text {
+  font-size: 3.5vw;
+}
+
+.Bold-regular {
+  font-size: 1.8vw;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.regular {
+  font-size: 1.5vw;
+}
+
+.top-section {
+  margin: 15px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+}
+
+.top-right-box {
+  position: absolute;
+  right: 0vw;
+  top: 4vw;
+  width: 18vw;
+}
+
+.bottom-right-box {
+  justify-content: right;
+  justify-items: right;
+  justify-content: flex-end;
+  margin: 1%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.Investor-type {
+  background-color: rgba(211, 211, 211, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 30px;
+  border-style: hidden;
+  /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 1px #666;
+  /* this draws the table border  */
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #04AA6D;
+  height: 6vw;
+  font-size: 2.5vw;
+}
+
+td {
+  height: 5vw;
+  font-size: 2vw;
+  border-bottom: 1px solid #ddd;
+
+}
+
+input {
+width: 22vw;
+max-width: 180px;
+}
+
+
+tr:nth-child(even) {
+  background-color: rgba(100, 100, 200, 0.5);
+}
+
+tr:nth-child(3) {
+  background-color: rgba(0, 0, 204, 0.5);
+}
+
+.stock-headers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.question-background {
+  background-color: rgba(211, 211, 211, 0.2);
+  padding: 0.5%;
+  margin: 3% 5% 3% 5%;
+  border-radius: 3vw;
+  position: relative;
+}
+
+.grey-background {
+  background-color: rgba(211, 211, 211, 0.2);
+  padding: 20px 10px;
+  margin: 6% 25% 10% 25%;
+  border-radius: 3vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0px;
+  margin-left: 0px;
+  font-size: 2.5vw;
+}
+
+.inputContainer {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom:2vw ;
+}
+
+input {
+  background-color: #2e2e2e;
+  margin: 3px;
+  height: 3vw;
+  font-size: 2vw;
+}
+
+.questions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 0vw;
+  flex-basis: auto;
+}
+
+.big-button-mirror {
+  text-align: center;
+  color: white;
+  background-color: #6aa84fff;
+  font-size: 5vw;
+  border-radius: 15px;
+  border: 3px solid mediumblue;
+  margin: 25px;
+  margin-top: 15%;
+  padding: 15px;
+}
+
+.big-button-mirror:hover {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 4.5vw;
+  border-radius: 15px;
+  border: 6px solid mediumblue;
+  margin: 25px;
+  margin-top: 15%;
+  padding: 15px;
+}
+
+.medium-button {
+  text-align: center;
+  color: white;
+  background-color: #6aa84fff;
+  font-size: 4vw;
+  border-radius: 15px;
+  border: 3px solid mediumblue;
+  margin: 25px;
+  padding: 15px;
+}
+
+.medium-button:hover {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 3vw;
+  border-radius: 15px;
+  border: 6px solid mediumblue;
+  margin: 25px;
+  padding: 15px;
+}
+
+.button-question-4 {
+  font-size: 3vw;
+}
+
+.next-button {
+  text-align: center;
+  color: white;
+  background-color: #4285f4ff;
+  font-size: 4vw;
+  border-radius: 15px;
+  border: 3px solid mediumblue;
+  margin: 0%;
+  padding: 2%;
+}
+
+.next-button:hover {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 3.8vw;
+  border-radius: 15px;
+  border: 6px solid mediumblue;
+}
+
+.button-small-link {
+  border: none;
+  background: none;
+  color: #3366CC;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 3vw;
+  margin: 25px;
+  padding: 15px;
+}
+
+.bottom-section {
+  font-size: 1.2em;
+  margin-top: 20%;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.out-button {
+  text-align: center;
+  color: white;
+  background-color: #e06666ff;
+  font-size: 3vw;
+  border-radius: 15px;
+  border: 3px solid mediumblue;
+  margin: 5px;
+  padding: 5px;
+}
+
+.out-button:hover {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2.5vw;
+  border-radius: 15px;
+  border: 6px solid mediumblue;
+  margin: 5px;
+  padding: 5px;
+}
+
+.selected{
+  background-color: rgb(77, 255, 0);
+  border: 5px solid mediumblue;
+  margin: 22px;
+  padding: 12px;
+}
