@@ -1,4 +1,6 @@
 
+let currentPathWithoutPageName = getCurrentPathWithoutPageName();
+
 // Use a regular expression to match the number after "Question" and capture it in a group
 const regex = /Question(\d+)/;
 
@@ -6,8 +8,6 @@ let questionNum;
 const nothing = currentPage.replace(regex, (match, p1) => {
     questionNum = parseInt(p1, 10);
 });
-
-console.log(questionNum);
 
 // Get all buttons on the page
 const buttons = Array.from(document.querySelectorAll('button.medium-button'));
@@ -40,12 +40,6 @@ buttons.forEach(button => {
 let selectedButton = buttons.find(btn => btn.classList.contains('selected'));
 
 
-console.log(selected)
-console.log(buttons);
-//console.log(selectedButton.innerText);
-
-// Get the "next" button
-
 switch (questionNum) {
     case 1:
         regularNextButton();
@@ -63,8 +57,6 @@ switch (questionNum) {
 }
 
 
-
-
 function regularNextButton() {
     console.log(selected)
     console.log("regualr button")
@@ -78,7 +70,6 @@ function regularNextButton() {
 
     // Add a click event listener to the "next" button
     nextButton.addEventListener('click', () => {
-        console.log("regualr button clicked")
         // If no button was selected, display an error message
         if (saveSelected()) {
           nextPageFun(nextButton.href);
@@ -88,6 +79,7 @@ function regularNextButton() {
         }
     });
 }
+
 
 function regularBackButton() {
     //set the new href for the back button
@@ -103,12 +95,12 @@ function regularBackButton() {
     })
 }
 
+
 function submitButtonFun() {
-    submitButton.href = currentPage.replace('Question', 'Dashboard')
     submitButton.addEventListener('click', () => {
         if (saveSelected) {
-            calculateParameters;
-            nextPageFun(nextButton.href);
+           // calculateParameters();
+            nextPageFun(currentPathWithoutPageName + "/Dashboard.html");
         }
         else {
             return;
