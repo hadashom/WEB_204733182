@@ -22,6 +22,13 @@ html {
   background-blend-mode: multiply;
 }
 
+.page {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
 .h1-header {
   text-align: center;
   font-family: Lexend;
@@ -138,8 +145,8 @@ td {
 }
 
 input {
-width: 22vw;
-max-width: 180px;
+  width: 22vw;
+  max-width: 180px;
 }
 
 
@@ -185,7 +192,7 @@ form {
 .inputContainer {
   display: inline-block;
   vertical-align: middle;
-  margin-bottom:2vw ;
+  margin-bottom: 2vw;
 }
 
 input {
@@ -204,6 +211,7 @@ input {
 }
 
 .big-button-mirror {
+  cursor: pointer;
   text-align: center;
   color: white;
   background-color: #6aa84fff;
@@ -228,6 +236,7 @@ input {
 }
 
 .medium-button {
+  cursor: pointer;
   text-align: center;
   color: white;
   background-color: #6aa84fff;
@@ -254,6 +263,7 @@ input {
 }
 
 .next-button {
+  cursor: pointer;
   text-align: center;
   color: white;
   background-color: #4285f4ff;
@@ -274,6 +284,7 @@ input {
 }
 
 .button-small-link {
+  cursor: pointer;
   border: none;
   background: none;
   color: #3366CC;
@@ -292,6 +303,7 @@ input {
 }
 
 .out-button {
+  cursor: pointer;
   text-align: center;
   color: white;
   background-color: #e06666ff;
@@ -313,9 +325,85 @@ input {
   padding: 5px;
 }
 
-.selected{
+.selected {
   background-color: rgb(77, 255, 0);
   border: 5px solid mediumblue;
   margin: 22px;
   padding: 12px;
+}
+
+a {
+  cursor: pointer;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.scene_element {
+  animation-duration: 0.5s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+
+}
+
+/** An element that fades in */
+.scene_element--fadein {
+  animation-name: fadeIn;
+}
+
+/** An element that fades in and slides up */
+.scene_element--fadeinup {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+
+}
+
+/** An element that fades in and slides from the right */
+.scene_element--fadeinright {
+  animation-name: fadeInRight;
+}
+
+.scene_delay {
+  animation-delay: 0.75s;
+}
+
+.scene_delay_double {
+  animation-delay: 1.5s;
+}
+
+.scene_delay_triple {
+  animation-delay: 4s;
+
 }
