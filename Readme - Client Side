@@ -1,6 +1,0 @@
-In client side there is:
-All page navigatin working
-Transitions between pages and elements
-Log in and sign up with input validations (you can log in as long as you have a valid email adress and password)
-Questionnaire to fill out
-Dashboard with recommended stocks
