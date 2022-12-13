@@ -125,7 +125,6 @@ const isValidName = (name) => {
     if (nameRegex.test(name)) {
         return true;
     }
-    alert("name bad")
     return false;
 };
 
@@ -133,7 +132,6 @@ const isValidPassword = (password) => {
     if (passwordRegex.test(password)) {
         return true;
     }
-    alert("pass bad")
     return false;
 };
 
