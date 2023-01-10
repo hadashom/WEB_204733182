@@ -4,12 +4,12 @@ var express = require('express');
 var app = express();
 var path = require('path');
 const port = 8000;
-
+app.use(exoress.static('static'));
 
 //routes
 app.get('/', (req, res) => {
   //res.send('Hello World Express!');
-  res.sendFile(path.join(__dirname, "views/Home.html"))
+  res.sendFile(path.join(__dirname, "All Code/views/Home.html"))
 });
 
 
