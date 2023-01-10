@@ -5,11 +5,15 @@ var app = express();
 var path = require('path');
 const port = 8000;
 
-//
-app.get('/', (req,res) => {
-  res.send('Hello World Express!');
+
+//routes
+app.get('/', (req, res) => {
+  //res.send('Hello World Express!');
+  res.sendFile(path.join(__dirname, "views/Home.html"))
 });
 
-app.listen(port, ()=>{
+
+//listen
+app.listen(port, () => {
   console.log("app is running on port " + port);
 })
