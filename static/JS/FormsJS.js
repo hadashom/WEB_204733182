@@ -30,14 +30,14 @@ if (fnameInputField != null) {
 
 if (signUpBtn != null) {
     signUpBtn.addEventListener('click', () => {
-        nextPageFun(currentPathWithoutPageName + "/Sign_Up.html");
+        nextPageFun(currentPathWithoutPageName + "/Sign_Up");
     })
 }
 
 if (signInBtn != null) {
     signInBtn.addEventListener('click', () => {
         console.log("Hi")
-        nextPageFun(currentPathWithoutPageName + "/Sign_In.html");
+        nextPageFun(currentPathWithoutPageName + "/Sign_In");
     })
 }
 
@@ -67,7 +67,7 @@ if (logInBtn != null) {
 
         if (isValidEmail(emailInput) && isValidPassword(passwordInput)) {
             alert("You Can Enter")
-            nextPageFun(currentPathWithoutPageName + ("/Start Questionnaire.html"));
+            nextPageFun(currentPathWithoutPageName + ("/Start_Questionnaire.html"));
         }
         else {
             let messageTemp = validateInput("Good", "lnameInput", emailInput, passwordInput);
@@ -105,7 +105,7 @@ function validateInput(firstName, lastName, email, password) {
     } else if (!password.match(/[a-z]/i) || !password.match(/[0-9]/)) {
         errorMessage += "Password must contain a letter, and a number.\n";
     }
-    else if (!isValidPassword(password)){
+    else if (!isValidPassword(password)) {
         errorMessage += "Password can't contain special characters.\n";
     }
     if (errorMessage.length > 0) {

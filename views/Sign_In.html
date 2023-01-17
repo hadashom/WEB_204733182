@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="static/CSS/Styles.css">
-    <script defer src="static/JS/jsCode.js"></script>
-    <script defer src="static/JS/FormsJS.js"></script>
+    <link rel="stylesheet" href="CSS/Styles.css">
+    <script defer src="JS/jsCode.js"></script>
+    <script defer src="JS/FormsJS.js"></script>
 </head>
 
 <body class="scene_element scene_element--fadein">
@@ -18,12 +18,13 @@
         <form>
             <div class= "inputContainer">
                 <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email">
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="inputContainer">
                 <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
             </div>
+            <input type="submit" value="Enter">
           </form>
         <div>
             <button class="medium-button" id="log-in">Enter</button>
