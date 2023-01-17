@@ -67,7 +67,7 @@ if (logInBtn != null) {
 
         if (isValidEmail(emailInput) && isValidPassword(passwordInput)) {
             alert("You Can Enter")
-            nextPageFun(currentPathWithoutPageName + ("/Start_Questionnaire.html"));
+            nextPageFun(currentPathWithoutPageName + ("/StartQuestions.html"));
         }
         else {
             let messageTemp = validateInput("Good", "lnameInput", emailInput, passwordInput);

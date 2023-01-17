@@ -32,8 +32,8 @@ app.get('/Sign_Up', (req, res) => {
 });
 
 // Start questionnaire route
-app.get('/Start_Questionnaire', (req, res) => {
-    res.sendFile(path.join(__dirname, "views/Start_Questionnaire.html"));
+app.get('/StartQuestions', (req, res) => {
+    res.sendFile(path.join(__dirname, "views/StartQuestions.html"));
 });
 
 // home route
