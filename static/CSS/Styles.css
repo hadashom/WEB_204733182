@@ -17,7 +17,7 @@ body {
 
 html {
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(../../Images/stock-exchange-background.jpeg);
+  background-image: url(../Images/stock-exchange-background.jpeg);
   background-size: 1800px;
   background-blend-mode: multiply;
 }
@@ -146,12 +146,6 @@ td {
 
 }
 
-input {
-  width: 22vw;
-  max-width: 180px;
-}
-
-
 tr:nth-child(even) {
   background-color: rgba(100, 100, 200, 0.5);
 }
@@ -200,6 +194,7 @@ tr:nth-child(3) {
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   row-gap: 0px;
   margin-left: 0px;
   font-size: 2.5vw;
@@ -216,7 +211,11 @@ input {
   margin: 3px;
   height: 3vw;
   font-size: 1vw;
+  width: 22vw;
+  /* max-width: 180px; */
 }
+
+
 
 .questions {
   display: flex;
@@ -411,4 +410,18 @@ a {
 .scene_delay_triple {
   animation-delay: 4s;
 
+}
+
+#create-account {
+  margin: 25px;
+  height: 9vw;
+  font-size: 2.5vw;
+  width: 80%;
+}
+
+#log-in {
+  margin: 25px;
+  height: 9vw;
+  font-size: 2.5vw;
+  width: 80%;
 }

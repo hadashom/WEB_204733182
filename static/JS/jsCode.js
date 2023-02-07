@@ -26,6 +26,6 @@ const startQuestionsBtn = document.querySelector('#start-questions');
 
 if (startQuestionsBtn != null) {
     startQuestionsBtn.addEventListener('click', () => {
-        nextPageFun(getCurrentPathWithoutPageName() + "/Question1.html");
+        nextPageFun(getCurrentPathWithoutPageName() + "/Question1");
     })
 }

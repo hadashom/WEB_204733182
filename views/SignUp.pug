@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(rel='stylesheet', href='CSS/Styles.css')
+    script(src='JS/jsCode.js', defer)
+    script(src='JS/FormsJS.js', defer)
+  body.scene_element.scene_element--fadein
+    .grey-background
+      h3.h3-header Create your account
+      .sign-up-background
+        form(action='/signUpForm', method='post')
+          .inputContainer
+            label(for='fname') First name:
+            br
+            input#fname(type='text', name='fName', required)
+            br
+          .inputContainer
+            label(for='lname') Last Name:
+            br
+            input#lname(type='text', name='lName', required)
+          .inputContainer
+            label(for='email') Email:
+            br
+            input#email(type='email', name='email', required)
+          .inputContainer
+            label(for='password') Password:
+            br
+            input#password(type='password', name='password', required)
+          input#create-account.medium-button(type='submit', value='Create Account')
+      br
+      if error
+        p.error= error
+      button#go-to-sign-in.button-small-link Sign In

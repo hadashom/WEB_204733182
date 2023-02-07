@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(rel='stylesheet', href='CSS/Styles.css')
+    script(src='JS/jsCode.js', defer)
+    script(src='JS/questionPageJS.js', defer)
+  body.scene_element.scene_element--fadein
+    h3.h3-header Question 2 of 5
+    .question-background
+      h2.h2-header Choose your age
+      .questions
+        button.medium-button.scene_element.scene_element--fadeinup 18 - 29
+        button.medium-button.scene_element.scene_element--fadeinup 30 - 44
+        button.medium-button.scene_element.scene_element--fadeinup 45 - 65
+        button.medium-button.scene_element.scene_element--fadeinup 65+
+      .bottom-right-box
+        button.next-button Next Question
+    button.out-button Previous Question

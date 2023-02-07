@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(rel='stylesheet', href='CSS/Styles.css')
+    script(src='JS/jsCode.js', defer)
+    script(src='JS/questionPageJS.js', defer)
+  body.scene_element.scene_element--fadein
+    h3.h3-header Question 3 of 5
+    .question-background
+      h2.h2-header
+        | In how many years do you need the investment money?
+      .questions
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup Less than 2 years
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup 3-5 years
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup 5-10 years
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup over 10 years
+      .bottom-right-box
+        button.next-button Next Question
+    button.out-button Previous Question

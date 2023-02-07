@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(rel='stylesheet', href='CSS/Styles.css')
+    script(src='JS/jsCode.js', defer)
+    script(src='JS/questionPageJS.js', defer)
+  body.scene_element.scene_element--fadein
+    h3.h3-header Question 1 of 5
+    .question-background
+      h2.h2-header Choose gender
+      .questions
+        button.medium-button.scene_element.scene_element--fadeinup Male
+        button.medium-button.scene_element.scene_element--fadeinup Female
+        button.medium-button.scene_element.scene_element--fadeinup Other \ Rather Not Say
+      .bottom-right-box
+        button.next-button(onclick='') Next Question
+    button.out-button Return

@@ -1,0 +1,71 @@
+doctype html
+html(lang='en', xmlns='http://www.w3.org/1999/html')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(rel='stylesheet', href='CSS/Styles.css')
+    script(src='JS/jsCode.js', defer)
+    script(src='JS/DashboardJS.js', defer)
+  body.scene_element.scene_element--fadein
+    section.top-section
+      div
+        h1.h1-header #{memberName}'s Profile
+      .top-right-box
+        button.out-button.log-out Log Out
+    .Investor-type
+      h4.h4-header Investor Type:
+      h5.h5-header #{investorType}
+      .slidecontainer
+        input#myRange.slider(type='range', min='1', max='100', value=#{sliderValue}, readonly='readonly')
+      h5.h5-header conservative
+    div
+      h4.h4-header Recommended Stocks
+    div(style='overflow-x: auto;')
+      table
+        tbody
+            tr
+                th Stock
+                th 6 Months
+                th 12 Months
+                th 24 Months
+                th Volatility Index
+                th AVG Dividend
+            each n in mysqlres
+                tr.scene_element.scene_element--fadeinup
+                    td
+                    a(href=n.href, target='_blank') n.stock
+                    td n.6moths
+                    td n.8months
+                    td n.24months
+                    td n.volatility
+                    td n.dividend
+
+
+
+
+
+
+        //-   tr.scene_element.scene_element--fadeinup
+        //-     td
+        //-       a(href='https://finance.yahoo.com/quote/TSLA/', target='_blank') TSLA
+        //-     td +8%
+        //-     td +64%
+        //-     td +112%
+        //-     td 8
+        //-     td 0$
+        //-   tr.scene_element.scene_element--fadeinup.scene_delay
+        //-     td
+        //-       a(href='https://finance.yahoo.com/quote/AAPL/', target='_blank') AAPL
+        //-     td +1%
+        //-     td +12%
+        //-     td +60%
+        //-     td 5
+        //-     td 0$
+        //-   tr.scene_element.scene_element--fadeinup.scene_delay_double
+        //-     td
+        //-       a(href='https://finance.yahoo.com/quote/MSFT/', target='_blank') MSFT
+        //-     td +7%
+        //-     td -16%
+        //-     td -12%
+        //-     td 4
+        //-     td 16$

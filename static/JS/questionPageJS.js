@@ -100,7 +100,7 @@ function submitButtonFun() {
     submitButton.addEventListener('click', () => {
         if (saveSelected) {
            // calculateParameters();
-            nextPageFun(currentPathWithoutPageName + "/Dashboard.html");
+            nextPageFun(currentPathWithoutPageName + "/Dashboard");
         }
         else {
             return;

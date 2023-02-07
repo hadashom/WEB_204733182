@@ -7,5 +7,5 @@ const sliderBar = document.getElementById('myRange');
 sliderBar.disabled=true;             //First make sure it is not disabled
 
 logOutBtn.addEventListener('click', () => {
-    nextPageFun(currentPathWithoutPageName + "/Home.html");
+    nextPageFun(currentPathWithoutPageName + "/Home");
 })

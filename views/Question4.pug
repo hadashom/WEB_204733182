@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(rel='stylesheet', href='CSS/Styles.css')
+    script(src='JS/jsCode.js', defer)
+    script(src='JS/questionPageJS.js', defer)
+  body
+    h3.h3-header Question 4 of 5
+    .question-background
+      h2.h2-header.smaller-text
+        | How much do you agree with the following sentence?
+      h2.h2-header.smaller-text
+        | &ldquo;I prefer a higher risk investment with a higher reward potential&rdquo;
+      .questions
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup Not at all
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup Somewhat agree
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup Agree
+        button.medium-button.button-question-4.scene_element.scene_element--fadeinup Very much agree
+      .bottom-right-box
+        button.next-button Next Question
+    button.out-button Previous Question
