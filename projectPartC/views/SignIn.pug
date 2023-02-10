@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(rel='stylesheet', href='CSS/Styles.css')
+    script(src='JS/jsCode.js', defer)
+    script(src='JS/FormsJS.js', defer)
+  body.scene_element.scene_element--fadein
+    section.main-header
+      h1.h1-header
+        | Bringing you 
+        strong  smart investing solutions 
+    .grey-background
+      h3.h3-header Log In
+      form(action='/SignInForm', method='post')
+        .inputContainer
+          label(for='email') Email:
+          br
+          input#email(type='email', name='email', required)
+        .inputContainer
+          label(for='password') Password:
+          br
+          input#password(type='password', name='password', required)
+        input#log-in.medium-button(type='submit', value='Enter')
+      if error
+        p.error= error
+      div
+        br
+        a(href="/SignUp")
+          button(type="button", class="button-small-link") Sign Up

@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title #{page_title}
+    link(rel='stylesheet', href='/CSS/Styles.css')
+    script(src='/JS/jsCode.js', defer)
+    //- script(src='/JS/questionPageJS.js', defer)
+
+  body.scene_element.scene_element--fadein
+    h3.h3-header Question 3 of 5
+    .question-background
+      h2.h2-header In how many years do you need the investment money?
+      form(action="/userQuestion3", method="get")
+        select(name="years", id="years", required="required")
+          option(value=1) Less than 2 years
+          option(value=2) 3-5 years
+          option(value=3) 5-10 years
+          option(value=4) over 10 years
+        button(type="submit", class="next-button") Next Question
+      br
+      a(href="/Question2")
+        button(type="button", class="out-button") Previous Question
+

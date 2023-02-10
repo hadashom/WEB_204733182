@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/Styles.css">
+    <script defer src="JS/jsCode.js"></script>
+    <script defer src="JS/FormsJS.js"></script>
+</head>
+
+<body class="scene_element scene_element--fadein">
+    <section class="main-header">
+        <h1 class="h1-header">Bringing you <strong> smart investing solutions </strong></h1>
+    </section>
+    <div class=grey-background>
+        <h3 class="h3-header">Log In</h3>
+        <form action="/signInForm" method="get">
+            <div class= "inputContainer">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="inputContainer">
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="Enter">
+          </form>
+        <div>
+            <button class="medium-button" id="log-in">Enter</button>
+            <br>
+            <button class="button-small-link" id="go-to-sign-up">Sign Up</button>
+        </div>
+    </div>
+</body>
+
+</html>

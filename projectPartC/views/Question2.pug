@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title #{page_title}
+    link(rel='stylesheet', href='/CSS/Styles.css')
+    script(src='/JS/jsCode.js', defer)
+ 
+    body.scene_element.scene_element--fadein
+    h3.h3-header Question 2 of 5
+    .question-background
+      h2.h2-header Choose your age
+      form(action="/userQuestion2", method="get")
+        select(name="age", id="age", required="required")
+          option(value=4) 18 - 29
+          option(value=3) 30 - 44
+          option(value=2) 45 - 65
+          option(value=1) 65+
+        button(type="submit", class="next-button") Next Question
+      br
+      a(href="/Question1")
+        button(type="button", class="out-button") Previous Question

@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title #{page_title}
+    link(rel='stylesheet', href='/CSS/Styles.css')
+    script(src='/JS/jsCode.js', defer)
+    //- script(src='/JS/questionPageJS.js', defer)
+  body.scene_element.scene_element--fadein
+    h3.h3-header Question 1 of 5
+    .question-background
+      h2.h2-header Choose gender
+      form(action="/userQuestion1", method="get")
+        select(name="gender", id="gender", required="required")
+          option(value=3) Male
+          option(value=2) Female
+          option(value=2.5) Other \ Rather Not Say
+        button(type="submit", class="next-button") Next Question
+      br
+      a(href="/StartQuestions")
+        button(type="button", class="out-button") Return
