@@ -19,14 +19,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // DB functions
-app.get('/firstConnection', [CreateDB.dropTables, CreateDB.createTableAndInsertDataIntoMembers, CreateDB.createAndPopulateStocksTable], (req, res) => {
+app.get('/createDB', [CreateDB.dropTables, CreateDB.createTableAndInsertDataIntoMembers, CreateDB.createAndPopulateStocksTable], (req, res) => {
     res.send("Created tables and inserted Data");
 })
+//createt and show members table
 app.get('/createTableAndInsertDataIntoMembers', CreateDB.createTableAndInsertDataIntoMembers);
-app.get('/showMembers', CreateDB.showMembers);
-app.get('/showStocks', CreateDB.showStocks);
-app.get('/dropTables', CreateDB.dropTables);
+app.get('/showMembersTable', CreateDB.showMembers);
+//create and show stocks table
 app.get('/createAndPopulateStocksTable', CreateDB.createAndPopulateStocksTable);
+app.get('/showStocksTable', CreateDB.showStocks);
+//drop all tables
+app.get('/dropAllTables', CreateDB.dropTables);
 
 // redirect to home route
 app.get('/', (req, res) => {

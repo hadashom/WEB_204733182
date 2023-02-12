@@ -15,7 +15,7 @@ const createTableAndInsertDataIntoMembers = (req, res, next) => {
         // insert data into members table
         query = "INSERT INTO members (fname, lname, email, password) VALUES ?";
         var values = [["omer", "hadash", "omer@gmail.com", "123ASdasd"],
-        ["test", "Tewst", "test@gmail.com", "123ASDasd"],
+        ["test", "Tewst", "test@gmail.com", "123ASDasd", 2, 3, 2, 3, 3, 13, "Moderate"],
         ["John", "Doe", "johndoe@gmail.com", "Mypassword1!"],
         ["Jane", "Doe", "janedoe@gmail.com", "Mypassword2!"],
         ["Jim", "Smith", "jimsmith@gmail.com", "Mypassword3!"],
