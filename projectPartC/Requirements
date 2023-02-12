@@ -1,0 +1,28 @@
+Web Project - Part C - Requirements
+
+Modules Installed
+	  "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "csv-parser": "^3.0.0",
+    "csvtojson": "^2.0.10",
+    "express": "^4.18.2",
+    "mysql2": "^3.1.1",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+
+
+Paths for DB creation
+		/createDB - Drops tables if they exist, then creates and populates both tables
+		/createTableAndInsertDataIntoMembers - creates the 'Members' table and populates it with data
+		/showMembersTable - shows the data in members
+		/createAndPopulateStocksTable - creates the 'stocks' table and populates it with data from the 'data.csv'
+		/dropAllTables - drops all tables
+	
+
+SQL Syntax for all tables
+		
+			CREATE TABLE IF NOT EXISTS members (email varchar(255) PRIMARY KEY NOT NULL, fname varchar(255) NOT NULL, lname varchar(255) NOT NULL, password varchar(255) NOT NULL, question1 int, question2 int, question3 int, question4 int, question5 int, totalScore double(10,2), investorType ENUM('Conservative', 'Moderate', 'Aggressive'))"
+		
+				"CREATE TABLE IF NOT EXISTS stocks (stock VARCHAR(255) NOT NULL PRIMARY KEY, month6change FLOAT(5,2), month12change FLOAT(5,2), month24change FLOAT(5,2), volatilityIndex FLOAT(5,2), fit FLOAT(5,2))"
+				
+				
