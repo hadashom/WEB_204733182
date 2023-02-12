@@ -114,7 +114,6 @@ const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,16}$/;
 
 
 //inputs validation
-
 const isValidName = (name) => {
     if (nameRegex.test(name)) {
         return true;
@@ -138,15 +137,5 @@ function confirm_logout() {
     }
   }
 
-// function getInputs() {
-//     if (fnameInputField != null) {
-//         fnameInput = document.getElementById("fname").value;
-//     }
-//     if (fnameInputField != null) {
-//         lnameInput = document.getElementById("lname").value;
-//     }
-//     emailInput = document.getElementById("email").value;
-//     passwordInput = document.getElementById("password").value;
-// }
 
 module.exports = {isValidName, isValidPassword, confirm_logout};

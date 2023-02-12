@@ -3,9 +3,9 @@ const csv = require('csv-parser');
 const fs = require('fs');
 const path = require('path');
 const filePath = path.join(__dirname, 'data.csv');
-var query = "";
 
-const createTableAndInsertDataIntoMembers = (req, res) => {
+
+const createTableAndInsertDataIntoMembers = (req, res, next) => {
     try {
         // create members table
         let query = "CREATE TABLE IF NOT EXISTS members (email varchar(255) PRIMARY KEY NOT NULL, fname varchar(255) NOT NULL, lname varchar(255) NOT NULL, password varchar(255) NOT NULL, question1 int, question2 int, question3 int, question4 int, question5 int, totalScore double(10,2), investorType ENUM('Conservative', 'Moderate', 'Aggressive'))";
@@ -27,11 +27,12 @@ const createTableAndInsertDataIntoMembers = (req, res) => {
         ["Amanda", "Miller", "amandamiller@gmail.com", "Mypassword9!"],
         ["Benjamin", "Moore", "benjaminmoore@gmail.com", "Mypassword10!"]
         ];
+
         var data = values.map(arr => [arr[0], arr[1], arr[2], arr[3]]);
         sql.query(query, [data]);
-        console.log("members inserted");
-        res.send("members table created and data inserted");
-
+        console.log("members table created and data inserted");
+        //res.send("members table created and data inserted");
+        next();
     } catch (err) {
         console.log("Error: ", err);
         res.status(400).send({ message: "Error creating table or inserting data" });
@@ -40,25 +41,24 @@ const createTableAndInsertDataIntoMembers = (req, res) => {
 
 
 const showMembers = (req, res) => {
-
     sql.query("SELECT * FROM members", (err, mysqlres) => {
         res.send(mysqlres);
     });
-}
+};
 
 const showStocks = (req, res) => {
-
     sql.query("SELECT * FROM stocks", (err, mysqlres) => {
         res.send(mysqlres);
     });
 }
 
 
-const dropTables = (req, res) => {
+const dropTables = (req, res, next) => {
     try {
         let query = "DROP TABLE IF EXISTS members, stocks";
         sql.query(query);
         console.log("members and stocks table dropped");
+        next();
     } catch (err) {
         console.log("error in dropping members and stocks table ", err);
         res.status(400).send({ message: "error on dropping members and stocks table" + err });
@@ -67,7 +67,7 @@ const dropTables = (req, res) => {
 
 
 
-const createAndPopulateStocksTable = (req, res) => {
+const createAndPopulateStocksTable = (req, res, next) => {
     try {
         // Create table
         let query = "CREATE TABLE IF NOT EXISTS stocks (stock VARCHAR(255) NOT NULL PRIMARY KEY, month6change FLOAT(5,2), month12change FLOAT(5,2), month24change FLOAT(5,2), volatilityIndex FLOAT(5,2), fit FLOAT(5,2))";
@@ -86,8 +86,9 @@ const createAndPopulateStocksTable = (req, res) => {
                 // Insert data into table
                 let sqlQuery = "INSERT INTO stocks (stock, month6change, month12change, month24change, volatilityIndex, fit) VALUES ?";
                 let result = sql.query(sqlQuery, [stocks]);
-                // console.log("Number of records inserted: " + result.affectedRows);
-                res.send("Stock table created and data inserted");
+                console.log("Stock table created and data inserted");
+                //res.send("Stock table created and data inserted");
+                next();
             });
     } catch (err) {
         console.log("Error creating and populating stocks table: ", err);
